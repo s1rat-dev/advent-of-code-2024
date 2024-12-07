@@ -1,11 +1,11 @@
 import java.io.File
 import kotlin.math.abs
 
-val path = "src/main/kotlin/inputs/day01.txt"
-val file = File(path).absoluteFile
+private val path = "src/main/kotlin/inputs/day01.txt"
+private val file = File(path).absoluteFile
 
 
-fun part1(): Int {
+private fun part1(): Int {
     val firstList = mutableListOf<Int>()
     val secondList = mutableListOf<Int>()
 
@@ -24,7 +24,7 @@ fun part1(): Int {
     }.sum()
 }
 
-fun part2(): Int {
+private fun part2(): Int {
     val firstList = mutableListOf<Int>()
     val secondList = mutableListOf<Int>()
 
