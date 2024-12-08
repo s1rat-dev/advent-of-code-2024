@@ -9,7 +9,7 @@ private val tests = file.readLines().subList(1177, file.readLines().size)
 
 private fun part1(): Int =
     tests.map { it.split(",") }.filter { testData ->
-        testData.windowed(2, 1).all { rules[it.first()]?.contains(it.last()) ?: false }
+        testData.windowed(2, 1).all { rules[it.first()]?.contains(it.last()) == true }
     }.sumOf { it[it.size / 2].toInt() }
 
 
@@ -22,7 +22,7 @@ private fun part2(): Int =
 
         while (list.size != td.size) {
             for (item in tempList) {
-                if ((tempList - item).all { rules[item]?.contains(it) ?: false }) {
+                if ((tempList - item).all { rules[item]?.contains(it) == true }) {
                     list.add(item)
                 }
             }
