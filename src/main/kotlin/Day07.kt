@@ -60,6 +60,8 @@ class Calculator {
             }
 
             operations.forEach {
+                if (iterationsCount == 1) return
+
                 iterate(it.invoke(current, list.first()), list.drop(1), target)
             }
         }
