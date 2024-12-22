@@ -58,7 +58,6 @@ private fun part2(): Int {
         }
 
         pathHistory.add(player to directionDecider.getDirection())
-
     }
 
     var counter = 0
